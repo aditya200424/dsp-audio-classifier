@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python311", "libsndfile", "ffmpeg"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "python demo_app.py --server --port $PORT"
